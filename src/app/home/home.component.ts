@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ClickService } from '../click.service';
 import { HighlightDirective } from '../highlight.directive';
 
 @Component({
@@ -10,9 +11,10 @@ import { HighlightDirective } from '../highlight.directive';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private clickService: ClickService) { }
 
   ngOnInit(): void {
+    this.clickService.registerClick();
   }
 
 }

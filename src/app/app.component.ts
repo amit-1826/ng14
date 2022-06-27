@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { RoutingRoutingModule } from './routing-routing.module';
-
-const routes: Routes = []
 
 @Component({
   standalone: true,
-  imports: [HomeComponent, RoutingRoutingModule],
+  imports: [HomeComponent, RouterModule],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
