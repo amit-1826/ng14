@@ -13,9 +13,17 @@ import { ChildComponent } from './child/child.component';
 export class HomeComponent implements OnInit {
 
   planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter'];
+  objectProperty = {
+    name: 'Amit',
+    age: 22
+  }
 
   addPlanet() {
     this.planets.push('Jupiter');
+  }
+
+  changeObjectPropertyData() {
+    this.objectProperty.name = 'Amit Dubey'
   }
 
   constructor(private clickService: ClickService) { }
